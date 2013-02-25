@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1574437B-4046-48E2-AA56-660E160B65FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HighwireAPIWrapper</RootNamespace>
+    <AssemblyName>HighwireAPIWrapper</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\app.highwire.com\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryCollection.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerCollection.cs" />
+    <Compile Include="Models\EbaySettings.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\ImageCollection.cs" />
+    <Compile Include="Models\ItemSpecific.cs" />
+    <Compile Include="Models\ListingProfile.cs" />
+    <Compile Include="Models\ListingProfileCollection.cs" />
+    <Compile Include="Models\MetaField.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderCollection.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\OrderLabel.cs" />
+    <Compile Include="Models\OrderLabelCollection.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductCollection.cs" />
+    <Compile Include="Models\ShippingProfile.cs" />
+    <Compile Include="Models\ShippingProfileCollection.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\Template.cs" />
+    <Compile Include="Models\TemplateCollection.cs" />
+    <Compile Include="Models\ThemeTemplate.cs" />
+    <Compile Include="Models\ThemeTemplateSnippet.cs" />
+    <Compile Include="Models\Variant.cs" />
+    <Compile Include="Models\VariantCollection.cs" />
+    <Compile Include="Requests\AddCategoryToProductRequest.cs" />
+    <Compile Include="Requests\AddImageToProductRequest.cs" />
+    <Compile Include="Requests\AddMetaFieldToProductRequest.cs" />
+    <Compile Include="Requests\AddVariantToProductRequest.cs" />
+    <Compile Include="Requests\CreateCategoryRequest.cs" />
+    <Compile Include="Requests\CreateEbaySettingsRequest.cs" />
+    <Compile Include="Requests\CreateListingProfileRequest.cs" />
+    <Compile Include="Requests\CreateOrderLabelRequest.cs" />
+    <Compile Include="Requests\CreateProductRequest.cs" />
+    <Compile Include="Requests\CreateShippingProfileRequest.cs" />
+    <Compile Include="Requests\CreateTemplateRequest.cs" />
+    <Compile Include="Requests\CreateThemeTemplateSnippetRequest.cs" />
+    <Compile Include="Requests\DeleteCategoryFromProductRequest.cs" />
+    <Compile Include="Requests\DeleteCategoryRequest.cs" />
+    <Compile Include="Requests\DeleteEbaySettingsRequest.cs" />
+    <Compile Include="Requests\DeleteImageFromProductRequest.cs" />
+    <Compile Include="Requests\DeleteListingProfileRequest.cs" />
+    <Compile Include="Requests\DeleteMetaFieldFromProductRequest.cs" />
+    <Compile Include="Requests\DeleteOrderLabelRequest.cs" />
+    <Compile Include="Requests\DeleteProductRequest.cs" />
+    <Compile Include="Requests\DeleteShippingProfileRequest.cs" />
+    <Compile Include="Requests\DeleteTemplateRequest.cs" />
+    <Compile Include="Requests\DeleteThemeTemplateSnippetRequest.cs" />
+    <Compile Include="Requests\DeleteVariantFromProductRequest.cs" />
+    <Compile Include="Requests\EditCategoryRequest.cs" />
+    <Compile Include="Requests\EditProductRequest.cs" />
+    <Compile Include="Requests\EditThemeTemplateRequest.cs" />
+    <Compile Include="Requests\EditThemeTemplateSnippetRequest.cs" />
+    <Compile Include="Requests\EditVariantRequest.cs" />
+    <Compile Include="Requests\GetAllCategoriesRequest.cs" />
+    <Compile Include="Requests\GetAllCustomersRequest.cs" />
+    <Compile Include="Requests\GetAllCustomersResponse.cs" />
+    <Compile Include="Requests\GetAllListingProfilesRequest.cs" />
+    <Compile Include="Requests\GetAllOrderLabelsRequest.cs" />
+    <Compile Include="Requests\GetAllOrdersRequest.cs" />
+    <Compile Include="Requests\GetAllProductsRequest.cs" />
+    <Compile Include="Requests\GetAllShippingProfilesRequest.cs" />
+    <Compile Include="Requests\GetAllTemplatesRequest.cs" />
+    <Compile Include="Requests\GetAllThemeTemplateSnippetsRequest.cs" />
+    <Compile Include="Requests\GetCategoryRequest.cs" />
+    <Compile Include="Requests\GetCustomerRequest.cs" />
+    <Compile Include="Requests\GetEbaySettingsRequest.cs" />
+    <Compile Include="Requests\GetListingProfileRequest.cs" />
+    <Compile Include="Requests\GetOrderLabelRequest.cs" />
+    <Compile Include="Requests\GetOrderRequest.cs" />
+    <Compile Include="Requests\GetProductCategoriesRequest.cs" />
+    <Compile Include="Requests\GetProductImagesRequest.cs" />
+    <Compile Include="Requests\GetProductRequest.cs" />
+    <Compile Include="Requests\GetProductVariantsRequest.cs" />
+    <Compile Include="Requests\GetShippingProfileRequest.cs" />
+    <Compile Include="Requests\BaseTypes\HighwireGetRequest.cs" />
+    <Compile Include="Requests\BaseTypes\HighwirePostOrPutRequest.cs" />
+    <Compile Include="Requests\BaseTypes\LowerCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Requests\GetStoreRequest.cs" />
+    <Compile Include="Requests\GetTemplateRequest.cs" />
+    <Compile Include="Requests\GetThemeTemplateRequest.cs" />
+    <Compile Include="Requests\GetThemeTemplateSnippetRequest.cs" />
+    <Compile Include="Requests\UpdateOrderLabelRequest.cs" />
+    <Compile Include="Requests\UpdateOrderRequest.cs" />
+    <Compile Include="Requests\UpdateTemplateRequest.cs" />
+    <Compile Include="Responses\AddCategoryToProductResponse.cs" />
+    <Compile Include="Responses\AddImageToProductResponse.cs" />
+    <Compile Include="Responses\AddMetaFieldToProductResponse.cs" />
+    <Compile Include="Responses\AddVariantToProductResponse.cs" />
+    <Compile Include="Responses\CreateCategoryResponse.cs" />
+    <Compile Include="Responses\CreateEbaySettingsResponse.cs" />
+    <Compile Include="Responses\CreateListingProfileResponse.cs" />
+    <Compile Include="Responses\CreateOrderLabelResponse.cs" />
+    <Compile Include="Responses\CreateShippingProfileResponse.cs" />
+    <Compile Include="Responses\CreateTemplateResponse.cs" />
+    <Compile Include="Responses\CreateThemeTemplateSnippetResponse.cs" />
+    <Compile Include="Responses\DeleteCategoryFromProductResponse.cs" />
+    <Compile Include="Responses\DeleteEbaySettingsResponse.cs" />
+    <Compile Include="Responses\DeleteImageFromProductResponse.cs" />
+    <Compile Include="Responses\DeleteListingProfileResponse.cs" />
+    <Compile Include="Responses\DeleteMetaFieldFromProductResponse.cs" />
+    <Compile Include="Responses\DeleteProductResponse.cs" />
+    <Compile Include="Responses\DeleteShippingProfileResponse.cs" />
+    <Compile Include="Responses\DeleteTemplateResponse.cs" />
+    <Compile Include="Responses\DeleteThemeTemplateSnippetResponse.cs" />
+    <Compile Include="Responses\DeleteVariantFromProductResponse.cs" />
+    <Compile Include="Responses\EditCategoryResponse.cs" />
+    <Compile Include="Responses\EditProductResponse.cs" />
+    <Compile Include="Responses\EditThemeTemplateResponse.cs" />
+    <Compile Include="Responses\EditThemeTemplateSnippetResponse.cs" />
+    <Compile Include="Responses\EditVariantResponse.cs" />
+    <Compile Include="Responses\GetAllCategoriesResponse.cs" />
+    <Compile Include="Responses\GetAllListingProfilesResponse.cs" />
+    <Compile Include="Responses\GetAllOrderLabelsResponse.cs" />
+    <Compile Include="Responses\GetAllOrdersResponse.cs" />
+    <Compile Include="Responses\GetAllProductsResponse.cs" />
+    <Compile Include="Responses\GetAllShippingProfilesResponse.cs" />
+    <Compile Include="Responses\GetAllTemplatesResponse.cs" />
+    <Compile Include="Responses\GetAllThemeTemplateSnippetsResponse.cs" />
+    <Compile Include="Responses\GetCategoryResponse.cs" />
+    <Compile Include="Responses\GetCustomerResponse.cs" />
+    <Compile Include="Responses\GetEbaySettingsResponse.cs" />
+    <Compile Include="Responses\GetListingProfileResponse.cs" />
+    <Compile Include="Responses\GetOrderLabelResponse.cs" />
+    <Compile Include="Responses\GetOrderResponse.cs" />
+    <Compile Include="Responses\GetProductCategoriesResponse.cs" />
+    <Compile Include="Responses\GetProductImagesResponse.cs" />
+    <Compile Include="Responses\GetProductResponse.cs" />
+    <Compile Include="Responses\GetProductVariantsResponse.cs" />
+    <Compile Include="Responses\GetShippingProfileResponse.cs" />
+    <Compile Include="Responses\BaseTypes\IHighwireResponse.cs" />
+    <Compile Include="Responses\CreateProductResponse.cs" />
+    <Compile Include="Enumerations.cs" />
+    <Compile Include="HighwireAPI.cs" />
+    <Compile Include="Requests\BaseTypes\HighwireRequest.cs" />
+    <Compile Include="Responses\BaseTypes\HighwireResponse.cs" />
+    <Compile Include="Requests\BaseTypes\IHighwireRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responses\GetStoreResponse.cs" />
+    <Compile Include="Responses\GetTemplateResponse.cs" />
+    <Compile Include="Responses\GetThemeTemplateResponse.cs" />
+    <Compile Include="Responses\GetThemeTemplateSnippetResponse.cs" />
+    <Compile Include="Responses\UpdateOrderLabelResponse.cs" />
+    <Compile Include="Responses\UpdateOrderResponse.cs" />
+    <Compile Include="Responses\UpdateTemplateResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
