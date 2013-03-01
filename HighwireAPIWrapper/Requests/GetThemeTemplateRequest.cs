@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             string.Format("theme/{0}.json", Enum.GetName(typeof(eThemeTemplateName), templateName).ToLower()))
         {
         }
+
+        public GetThemeTemplateRequest(eThemeTemplateName templateName)
+            : base(string.Format("theme/{0}.json", Enum.GetName(typeof(eThemeTemplateName), templateName).ToLower()))
+        {
+        }
     }
 }

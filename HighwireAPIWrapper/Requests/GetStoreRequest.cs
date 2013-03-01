@@ -11,5 +11,10 @@ namespace HighwireAPIWrapper.Requests
         public GetStoreRequest(int storeID) : base(storeID, "store.json")
         {
         }
+
+        public GetStoreRequest()
+            : base("store.json")
+        {
+        }
     }
 }

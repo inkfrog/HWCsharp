@@ -52,5 +52,15 @@ namespace HighwireAPIWrapper.Requests
             this.Order = "desc";
             this.Cat = 0;
         }
+
+        public GetAllProductsRequest()
+            : base("products.json")
+        {
+            this.Page = 1;
+            this.Limit = 100;
+            this.SortBy = "id";
+            this.Order = "desc";
+            this.Cat = 0;
+        }
     }
 }

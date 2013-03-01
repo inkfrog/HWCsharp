@@ -22,5 +22,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, "customers.json")
         {
         }
+
+        public GetAllCustomersRequest()
+            : base("customers.json")
+        {
+        }
     }
 }

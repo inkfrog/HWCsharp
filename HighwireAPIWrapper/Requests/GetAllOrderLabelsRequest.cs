@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, "orders/labels.json")
         {
         }
+
+        public GetAllOrderLabelsRequest()
+            : base("orders/labels.json")
+        {
+        }
     }
 }

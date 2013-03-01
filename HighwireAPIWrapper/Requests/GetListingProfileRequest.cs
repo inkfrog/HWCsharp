@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, string.Format("ebay/listing_profiles/{0}.json", profileID))
         {
         }
+
+        public GetListingProfileRequest(int profileID)
+            : base(string.Format("ebay/listing_profiles/{0}.json", profileID))
+        {
+        }
     }
 }

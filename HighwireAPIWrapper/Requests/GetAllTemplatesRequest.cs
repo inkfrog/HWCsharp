@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, "ebay/templates.json")
         {
         }
+
+        public GetAllTemplatesRequest()
+            : base("ebay/templates.json")
+        {
+        }
     }
 }

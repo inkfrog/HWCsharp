@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, eHttpMethod.Delete, string.Format("theme/snippets/{0}.json", snippetID))
         {
         }
+
+        public DeleteThemeTemplateSnippetRequest(int snippetID)
+            : base(eHttpMethod.Delete, string.Format("theme/snippets/{0}.json", snippetID))
+        {
+        }
     }
 }

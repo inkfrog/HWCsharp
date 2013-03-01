@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, string.Format("ebay/templates/{0}.json", templateID))
         {
         }
+
+        public GetTemplateRequest(int templateID)
+            : base(string.Format("ebay/templates/{0}.json", templateID))
+        {
+        }
     }
 }

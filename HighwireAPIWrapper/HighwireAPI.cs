@@ -6,6 +6,7 @@ using HighwireAPIWrapper.Responses;
 using HighwireAPIWrapper.Requests.BaseTypes;
 using HighwireAPIWrapper.Responses.BaseTypes;
 using System.Net;
+using HighwireAPIWrapper.Requests;
 
 namespace HighwireAPIWrapper
 {
@@ -50,7 +51,7 @@ namespace HighwireAPIWrapper
                                                                                where ResponseType : IHighwireResponse, new()
 
         {
-            if (string.IsNullOrWhiteSpace(APIKey))
+            if (!typeof(AuthRequest).Equals(typeof(RequestType)) && string.IsNullOrWhiteSpace(APIKey))
             {
                 throw new InvalidOperationException("APIKey required for making Highwire API calls.");
             }

@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, eHttpMethod.Delete, string.Format("ebay/listing_profiles/{0}.json", profileID))
         {
         }
+
+        public DeleteListingProfileRequest(int profileID)
+            : base(eHttpMethod.Delete, string.Format("ebay/listing_profiles/{0}.json", profileID))
+        {
+        }
     }
 }

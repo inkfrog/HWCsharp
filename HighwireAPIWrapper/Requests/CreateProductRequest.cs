@@ -14,5 +14,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, productData, eHttpMethod.Post, "products.json")
         {
         }
+
+        public CreateProductRequest(Product productData)
+            : base(productData, eHttpMethod.Post, "products.json")
+        {
+        }
     }
 }

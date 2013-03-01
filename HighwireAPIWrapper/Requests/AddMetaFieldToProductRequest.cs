@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, fieldData, eHttpMethod.Post, string.Format("products/{0}/metafields.json", productID))
         {
         }
+
+        public AddMetaFieldToProductRequest(int productID, MetaField fieldData)
+            : base(fieldData, eHttpMethod.Post, string.Format("products/{0}/metafields.json", productID))
+        {
+        }
     }
 }

@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, snippetData, eHttpMethod.Put, string.Format("snippets/{0}.json", snippetData.ID.Value))
         {
         }
+
+        public EditThemeTemplateSnippetRequest(ThemeTemplateSnippet snippetData)
+            : base(snippetData, eHttpMethod.Put, string.Format("snippets/{0}.json", snippetData.ID.Value))
+        {
+        }
     }
 }

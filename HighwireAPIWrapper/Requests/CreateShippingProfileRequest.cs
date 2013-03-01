@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, profileData, eHttpMethod.Post, "ebay/shipping_profiles.json")
         {
         }
+
+        public CreateShippingProfileRequest(ShippingProfile profileData)
+            : base(profileData, eHttpMethod.Post, "ebay/shipping_profiles.json")
+        {
+        }
     }
 }

@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, eHttpMethod.Delete, string.Format("products/{0}/ebay_settings.json", productID))
         {
         }
+
+        public DeleteEbaySettingsRequest(int productID)
+            : base(eHttpMethod.Delete, string.Format("products/{0}/ebay_settings.json", productID))
+        {
+        }
     }
 }

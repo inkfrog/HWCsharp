@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, orderData, eHttpMethod.Put, string.Format("orders/{0}.json", orderData.ID.Value))
         {
         }
+
+        public UpdateOrderRequest(Order orderData)
+            : base(orderData, eHttpMethod.Put, string.Format("orders/{0}.json", orderData.ID.Value))
+        {
+        }
     }
 }

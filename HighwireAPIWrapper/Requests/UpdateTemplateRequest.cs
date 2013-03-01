@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, templateData, eHttpMethod.Put, string.Format("ebay/templates/{0}.json", templateData.ID.Value))
         {
         }
+
+        public UpdateTemplateRequest(ListingTemplate templateData)
+            : base(templateData, eHttpMethod.Put, string.Format("ebay/templates/{0}.json", templateData.ID.Value))
+        {
+        }
     }
 }

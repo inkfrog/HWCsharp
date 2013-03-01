@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, labelData, eHttpMethod.Post, "orders/labels.json")
         {
         }
+
+        public CreateOrderLabelRequest(OrderLabel labelData)
+            : base(labelData, eHttpMethod.Post, "orders/labels.json")
+        {
+        }
     }
 }

@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, settingsData, eHttpMethod.Put, string.Format("products/{0}/ebay_settings.json", productID))
         {
         }
+
+        public CreateEbaySettingsRequest(int productID, EbaySettings settingsData)
+            : base(settingsData, eHttpMethod.Put, string.Format("products/{0}/ebay_settings.json", productID))
+        {
+        }
     }
 }

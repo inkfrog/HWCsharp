@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, eHttpMethod.Delete, string.Format("ebay/templates/{0}.json", templateID))
         {
         }
+
+        public DeleteTemplateRequest(int templateID)
+            : base(eHttpMethod.Delete, string.Format("ebay/templates/{0}.json", templateID))
+        {
+        }
     }
 }

@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, eHttpMethod.Delete, string.Format("ebay/shipping_profiles/{0}.json", profileID))
         {
         }
+
+        public DeleteShippingProfileRequest(int profileID)
+            : base(eHttpMethod.Delete, string.Format("ebay/shipping_profiles/{0}.json", profileID))
+        {
+        }
     }
 }

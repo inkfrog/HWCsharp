@@ -15,8 +15,14 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
     {
         private PostDataType PostData { get; set; }
 
-        public HighwirePostOrPutRequest(int storeID, PostDataType postData, eHttpMethod httpMethod, string apiURLSuffix)
+        internal HighwirePostOrPutRequest(int storeID, PostDataType postData, eHttpMethod httpMethod, string apiURLSuffix)
             : base(storeID,httpMethod,apiURLSuffix)
+        {
+            this.PostData = postData;
+        }
+
+        internal HighwirePostOrPutRequest(PostDataType postData, eHttpMethod httpMethod, string apiURLSuffix)
+            : base(httpMethod, apiURLSuffix)
         {
             this.PostData = postData;
         }
@@ -27,8 +33,8 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
             if (HighwireAPI.IsMasterKey)
             {
                 request.Headers.Add("x-hw-masterkey", HighwireAPI.APIKey);
+                request.Headers.Add("x-hw-storeid", this.StoreID.ToString());
             }
-            request.Headers.Add("x-hw-storeid", this.StoreID.ToString());
             request.Credentials = new NetworkCredential() { UserName = HighwireAPI.APIKey };
             request.Proxy = null;
             request.KeepAlive = false;

@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, labelData, eHttpMethod.Put, string.Format("orders/labels/{0}.json", labelData.ID.Value))
         {
         }
+
+        public UpdateOrderLabelRequest(OrderLabel labelData)
+            : base(labelData, eHttpMethod.Put, string.Format("orders/labels/{0}.json", labelData.ID.Value))
+        {
+        }
     }
 }

@@ -14,5 +14,9 @@ namespace HighwireAPIWrapper.Requests
         {
         }
 
+        public AddImageToProductRequest(int productID, Image imageData)
+            : base(imageData, eHttpMethod.Post, string.Format("products/{0}/images.json", productID))
+        {
+        }
     }
 }

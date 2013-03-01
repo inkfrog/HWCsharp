@@ -19,9 +19,15 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
         protected eHttpMethod HttpMethod { get; private set; }
         protected Exception Error { get; private set; }
 
-        public HighwireRequest(int storeID, eHttpMethod httpMethod, string apiURLSuffix)
+        internal HighwireRequest(int storeID, eHttpMethod httpMethod, string apiURLSuffix)
         {
             this.StoreID = storeID;
+            this.HttpMethod = httpMethod;
+            this.APIURLSuffix = apiURLSuffix;
+        }
+
+        internal HighwireRequest(eHttpMethod httpMethod, string apiURLSuffix)
+        {
             this.HttpMethod = httpMethod;
             this.APIURLSuffix = apiURLSuffix;
         }
@@ -32,8 +38,8 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
             if (HighwireAPI.IsMasterKey)
             {
                 request.Headers.Add("x-hw-masterkey", HighwireAPI.APIKey);
+                request.Headers.Add("x-hw-storeid", this.StoreID.ToString());
             }
-            request.Headers.Add("x-hw-storeid", this.StoreID.ToString());
             request.Credentials = new NetworkCredential() { UserName = HighwireAPI.APIKey };
             request.Timeout = HighwireAPI.CallTimeout;
             request.Proxy = null;

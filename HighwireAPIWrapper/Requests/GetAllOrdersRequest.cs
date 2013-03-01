@@ -87,5 +87,15 @@ namespace HighwireAPIWrapper.Requests
             this.Order = "desc";
             this.Status = "any";
         }
+
+        public GetAllOrdersRequest()
+            : base("orders.json")
+        {
+            this.Page = 1;
+            this.Limit = 100;
+            this.SortBy = "id";
+            this.Order = "desc";
+            this.Status = "any";
+        }
     }
 }

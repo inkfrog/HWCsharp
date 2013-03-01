@@ -14,5 +14,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, "categories.json")
         {
         }
+
+        public GetAllCategoriesRequest()
+            : base("categories.json")
+        {
+        }
     }
 }

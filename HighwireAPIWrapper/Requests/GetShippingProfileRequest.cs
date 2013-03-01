@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, string.Format("ebay/shipping_profiles/{0}.json", profileID))
         {
         }
+
+        public GetShippingProfileRequest(int profileID)
+            : base(string.Format("ebay/shipping_profiles/{0}.json", profileID))
+        {
+        }
     }
 }

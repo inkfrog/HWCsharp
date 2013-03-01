@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, string.Format("products/{0}/variants.json", productID))
         {
         }
+
+        public GetProductVariantsRequest(int productID)
+            : base(string.Format("products/{0}/variants.json", productID))
+        {
+        }
     }
 }

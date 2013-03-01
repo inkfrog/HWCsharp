@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, categoryData, eHttpMethod.Put, string.Format("categories/{0}.json", categoryData.ID.Value))
         {
         }
+
+        public EditCategoryRequest(Category categoryData)
+            : base(categoryData, eHttpMethod.Put, string.Format("categories/{0}.json", categoryData.ID.Value))
+        {
+        }
     }
 }

@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, "theme/snippets.json")
         {
         }
+
+        public GetAllThemeTemplateSnippetsRequest()
+            : base("theme/snippets.json")
+        {
+        }
     }
 }

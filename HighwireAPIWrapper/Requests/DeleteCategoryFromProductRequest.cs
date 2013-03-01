@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, eHttpMethod.Delete, string.Format("products/{0}/categories/{1}.json", productID, categoryID))
         {
         }
+
+        public DeleteCategoryFromProductRequest(int productID, int categoryID)
+            : base(eHttpMethod.Delete, string.Format("products/{0}/categories/{1}.json", productID, categoryID))
+        {
+        }
     }
 }

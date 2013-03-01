@@ -10,8 +10,13 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
 {
     public class HighwireGetRequest<RequestType> : HighwireRequest
     {
-        public HighwireGetRequest(int storeID, string apiURLSuffix)
+        internal HighwireGetRequest(int storeID, string apiURLSuffix)
             : base(storeID, eHttpMethod.Get, apiURLSuffix)
+        {
+        }
+
+        internal HighwireGetRequest(string apiURLSuffix)
+            : base(eHttpMethod.Get, apiURLSuffix)
         {
         }
 
@@ -38,8 +43,8 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
             if (HighwireAPI.IsMasterKey)
             {
                 request.Headers.Add("x-hw-masterkey", HighwireAPI.APIKey);
+                request.Headers.Add("x-hw-storeid", this.StoreID.ToString());
             }
-            request.Headers.Add("x-hw-storeid", this.StoreID.ToString());
             request.Credentials = new NetworkCredential() { UserName = HighwireAPI.APIKey };
             request.Timeout = HighwireAPI.CallTimeout;
             request.Proxy = null;

@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, new Category() { ID = categoryID }, eHttpMethod.Post, string.Format("products/{0}/categories.json", productID))
         {
         }
+
+        public AddCategoryToProductRequest(int productID, int categoryID)
+            : base(new Category() { ID = categoryID }, eHttpMethod.Post, string.Format("products/{0}/categories.json", productID))
+        {
+        }
     }
 }

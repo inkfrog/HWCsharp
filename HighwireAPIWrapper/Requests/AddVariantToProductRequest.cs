@@ -13,5 +13,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, variantData, eHttpMethod.Post, string.Format("products/{0}/variants.json", productID))
         {
         }
+
+        public AddVariantToProductRequest(int productID, Variant variantData)
+            : base(variantData, eHttpMethod.Post, string.Format("products/{0}/variants.json", productID))
+        {
+        }
     }
 }

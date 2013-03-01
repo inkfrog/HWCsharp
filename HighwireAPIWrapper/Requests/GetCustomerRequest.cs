@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, string.Format("customer/{0}.json", customerID))
         {
         }
+
+        public GetCustomerRequest(int customerID)
+            : base(string.Format("customer/{0}.json", customerID))
+        {
+        }
     }
 }

@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, eHttpMethod.Delete, string.Format("products/{0}/metafields/{1}.json", productID, metaFieldID))
         {
         }
+
+        public DeleteMetaFieldFromProductRequest(int productID, int metaFieldID)
+            : base(eHttpMethod.Delete, string.Format("products/{0}/metafields/{1}.json", productID, metaFieldID))
+        {
+        }
     }
 }

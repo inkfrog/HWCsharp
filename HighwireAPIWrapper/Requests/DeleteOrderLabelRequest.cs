@@ -12,5 +12,10 @@ namespace HighwireAPIWrapper.Requests
             : base(storeID, eHttpMethod.Delete, string.Format("orders/labels/{0}.json", labelID))
         {
         }
+
+        public DeleteOrderLabelRequest(int labelID)
+            : base(eHttpMethod.Delete, string.Format("orders/labels/{0}.json", labelID))
+        {
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using HighwireAPIWrapper.Responses.BaseTypes;
 using HighwireAPIWrapper.Models;
 
-namespace HighwireAPIWrapper.Requests
+namespace HighwireAPIWrapper.Responses
 {
     public class GetAllCustomersResponse : HighwireResponse<CustomerCollection>
     {
