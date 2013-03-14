@@ -49,5 +49,6 @@ namespace HighwireAPIWrapper.Models
         public bool? BestOffer_AutoDecline { get; set; }
         public decimal? BestOffer_AutoDecline_Price { get; set; }
         public string Currency { get; set; }
+        public List<PartsCompatabilities> PartsCompatabilities { get; set; }
     }
 }

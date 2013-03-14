@@ -63,6 +63,8 @@
     <Compile Include="Models\OrderItem.cs" />
     <Compile Include="Models\OrderLabel.cs" />
     <Compile Include="Models\OrderLabelCollection.cs" />
+    <Compile Include="Models\PartsCompatabilities.cs" />
+    <Compile Include="Models\PartsCompatability.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductCollection.cs" />
     <Compile Include="Models\ShippingProfile.cs" />
