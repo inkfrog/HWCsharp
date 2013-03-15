@@ -45,6 +45,10 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
                 request.Headers.Add("x-hw-masterkey", HighwireAPI.APIKey);
                 request.Headers.Add("x-hw-storeid", this.StoreID.ToString());
             }
+            if (HighwireAPI.DebugMode)
+            {
+                this.RequestURL = url.ToString();
+            }
             request.Credentials = new NetworkCredential() { UserName = HighwireAPI.APIKey };
             request.Timeout = HighwireAPI.CallTimeout;
             request.Proxy = null;

@@ -31,6 +31,11 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
             request.KeepAlive = false;
             request.Method = this.HttpMethod.ToString().ToUpper();
 
+            if (HighwireAPI.DebugMode)
+            {
+                this.RequestURL = HighwireAPI.BaseURL + this.APIURLSuffix;
+            }
+
             return GetResponse(request);
         }
     }

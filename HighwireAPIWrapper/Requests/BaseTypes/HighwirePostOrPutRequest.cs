@@ -41,6 +41,11 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
             request.Timeout = HighwireAPI.CallTimeout;
             request.Method = this.HttpMethod.ToString().ToUpper();
 
+            if (HighwireAPI.DebugMode)
+            {
+                this.RequestURL = HighwireAPI.BaseURL + this.APIURLSuffix;
+            }
+
             if (this.PostData != null && (this.HttpMethod == eHttpMethod.Post || this.HttpMethod == eHttpMethod.Put))
             {
                 request.ContentType = "application/json";
@@ -62,6 +67,11 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
                     };
                     serializer.Converters.Add(new IsoDateTimeConverter());
                     serializer.Serialize(writer, this.PostData);
+                }
+
+                if (HighwireAPI.DebugMode)
+                {
+                    this.RequestData = json.ToString();
                 }
 
                 byte[] requestData = Encoding.ASCII.GetBytes(json.ToString());

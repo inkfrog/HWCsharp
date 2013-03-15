@@ -12,12 +12,14 @@ using Newtonsoft.Json.Serialization;
 
 namespace HighwireAPIWrapper.Requests.BaseTypes
 {
-    public class HighwireRequest : IHighwireRequest
+    public abstract class HighwireRequest
     {
         protected int StoreID { get; private set; }
         protected string APIURLSuffix { get; private set; }
         protected eHttpMethod HttpMethod { get; private set; }
-        protected Exception Error { get; private set; }
+        internal Exception Error { get; set; }
+        internal string RequestData { get; set; }
+        internal string RequestURL { get; set; }
 
         internal HighwireRequest(int storeID, eHttpMethod httpMethod, string apiURLSuffix)
         {
@@ -40,6 +42,10 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
                 request.Headers.Add("x-hw-masterkey", HighwireAPI.APIKey);
                 request.Headers.Add("x-hw-storeid", this.StoreID.ToString());
             }
+            if (HighwireAPI.DebugMode)
+            {
+                this.RequestURL = HighwireAPI.BaseURL + this.APIURLSuffix;
+            }
             request.Credentials = new NetworkCredential() { UserName = HighwireAPI.APIKey };
             request.Timeout = HighwireAPI.CallTimeout;
             request.Proxy = null;
@@ -51,6 +57,7 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
 
         protected HttpWebResponse GetResponse(HttpWebRequest request)
         {
+
             //TODO: should implement retrying on certain status codes (e.g. timeout)
             try
             {
@@ -63,11 +70,6 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
                 //return response regardless of exception so calling code can check the status code
                 return (HttpWebResponse)e.Response;
             }
-        }
-
-        public Exception GetException()
-        {
-            return this.Error;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
     public class HighwireResponse : IHighwireResponse
     {
         public Exception Error { get; set; }
+        public DebugData DebugInfo { get; set; }
 
         public HttpStatusCode StatusCode { get; internal set; }
         public string StatusDescription
@@ -42,10 +43,13 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
         {
             this.StatusCode = response == null ? HttpStatusCode.Gone : response.StatusCode;
 
-            /*using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.ASCII))
+            if (HighwireAPI.DebugMode)
             {
-                string txt = reader.ReadToEnd();
-            }*/
+                using (NoCloseStreamReader reader = new NoCloseStreamReader(response.GetResponseStream(), Encoding.ASCII))
+                {
+                    this.DebugInfo.ResponseData = reader.ReadToEnd();
+                }
+            }
         }
     }
 
@@ -55,13 +59,19 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
 
         public override void Initialize(HttpWebResponse response)
         {
-            /*if (typeof(ResponseType) == typeof(HighwireAPIWrapper.Models.ListingProfile))
+            MemoryStream responseStr = new MemoryStream();
+            response.GetResponseStream().CopyTo(responseStr);
+            responseStr.Position = 0;
+
+            if (HighwireAPI.DebugMode)
             {
-                using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.ASCII))
+                using (NoCloseStreamReader reader = new NoCloseStreamReader(responseStr, Encoding.ASCII))
                 {
-                    string txt = reader.ReadToEnd();
+                    this.DebugInfo.ResponseData = reader.ReadToEnd();
                 }
-            }*/
+
+                responseStr.Position = 0;
+            }
 
             this.StatusCode = response == null ? HttpStatusCode.Gone : response.StatusCode;
 
@@ -80,7 +90,7 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
                     DateParseHandling = DateParseHandling.DateTime
                 };
 
-                using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.ASCII))
+                using (StreamReader reader = new StreamReader(responseStr, Encoding.ASCII))
                 {
                     JsonTextReader json = new JsonTextReader(reader);
                     this.Data = deserizalier.Deserialize<ResponseType>(json);
@@ -90,6 +100,33 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
 
         protected HighwireResponse()
         {
+        }
+    }
+
+    /// <summary>
+    /// Encapsulates a stream reader which does not close the underlying stream.
+    /// </summary>
+    internal class NoCloseStreamReader : StreamReader
+    {
+        /// <summary>
+        /// Creates a new stream reader object.
+        /// </summary>
+        /// <param name="stream">The underlying stream to read from.</param>
+        /// <param name="encoding">The encoding for the stream.</param>
+        public NoCloseStreamReader(Stream stream, Encoding encoding)
+            : base(stream, encoding)
+        {
+        }
+
+        /// <summary>
+        /// Disposes of the stream writer.
+        /// </summary>
+        /// <param name="disposing">True to dispose managed objects.</param>
+        protected override void Dispose(bool disposeManaged)
+        {
+            // Dispose the stream writer but pass false to the dispose
+            // method to stop it from closing the underlying stream
+            base.Dispose(false);
         }
     }
 }

@@ -10,5 +10,6 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
     {
         void Initialize(HttpWebResponse response);
         Exception Error { get; set; }
+        DebugData DebugInfo { get; set; }
     }
 }

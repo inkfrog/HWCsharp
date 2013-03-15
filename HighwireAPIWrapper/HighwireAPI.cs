@@ -47,7 +47,9 @@ namespace HighwireAPIWrapper
         /// </summary>
         public static int CallTimeout { internal get; set; }
 
-        public static ResponseType DoRequest<RequestType, ResponseType>(RequestType request) where RequestType : IHighwireRequest 
+        public static bool DebugMode { internal get; set; }
+
+        public static ResponseType DoRequest<RequestType, ResponseType>(RequestType request) where RequestType : HighwireRequest  
                                                                                where ResponseType : IHighwireResponse, new()
 
         {
@@ -57,6 +59,10 @@ namespace HighwireAPIWrapper
             }
 
             var response = new ResponseType();
+            if (DebugMode)
+            {
+                response.DebugInfo = new DebugData();
+            }
 
             HttpWebResponse webResponse = request.ExecuteRequest();
             response.Initialize(webResponse);
@@ -64,7 +70,14 @@ namespace HighwireAPIWrapper
             {
                 webResponse.Close();
             }
-            response.Error = request.GetException();
+            response.Error = request.Error;
+
+            if (DebugMode)
+            {
+                response.DebugInfo.RequestURL = request.RequestURL;
+                response.DebugInfo.RequestData = request.RequestData;
+            }
+
             return response;
         }
 
