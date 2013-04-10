@@ -12,7 +12,7 @@ namespace HighwireAPIWrapper
 {
     public class HighwireAPI
     {
-        private static readonly int DefaultTimeout = 10000;
+        private static readonly int DefaultTimeout = 1800000;
         private static string m_BaseURL = null;
 
         /// <summary>

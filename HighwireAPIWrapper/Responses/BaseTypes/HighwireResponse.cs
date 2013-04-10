@@ -60,17 +60,20 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
         public override void Initialize(HttpWebResponse response)
         {
             MemoryStream responseStr = new MemoryStream();
-            response.GetResponseStream().CopyTo(responseStr);
-            responseStr.Position = 0;
-
-            if (HighwireAPI.DebugMode)
+            if (response != null)
             {
-                using (NoCloseStreamReader reader = new NoCloseStreamReader(responseStr, Encoding.ASCII))
-                {
-                    this.DebugInfo.ResponseData = reader.ReadToEnd();
-                }
-
+                response.GetResponseStream().CopyTo(responseStr);
                 responseStr.Position = 0;
+
+                if (HighwireAPI.DebugMode)
+                {
+                    using (NoCloseStreamReader reader = new NoCloseStreamReader(responseStr, Encoding.ASCII))
+                    {
+                        this.DebugInfo.ResponseData = reader.ReadToEnd();
+                    }
+
+                    responseStr.Position = 0;
+                }
             }
 
             this.StatusCode = response == null ? HttpStatusCode.Gone : response.StatusCode;
