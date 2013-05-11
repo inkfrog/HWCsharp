@@ -57,5 +57,11 @@ namespace HighwireAPIWrapper.Models
         public string Location_Zip { get; set; }
         public string Location_Description { get; set; }
         public bool? Product_Profile { get; set; }
+        public long? Flat_Discount_Profile_ID { get; set; }
+        public long? Calculated_Discount_Profile_ID { get; set; }
+        public bool? Promotional_Discount_Profile { get; set; }
+        public long? Intl_Flat_Discount_Profile_ID { get; set; }
+        public long? Intl_Calculated_Discount_Profile_ID { get; set; }
+        public bool? Intl_Promotional_Discount_Profile { get; set; }
     }
 }
