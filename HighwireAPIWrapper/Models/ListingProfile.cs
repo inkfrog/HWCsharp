@@ -51,5 +51,6 @@ namespace HighwireAPIWrapper.Models
         public string Currency { get; set; }
         public List<PartsCompatabilities> PartsCompatabilities { get; set; }
         public string Condition_Description { get; set; }
+        public eAppendGalleryPreference? Append_Gallery_Preference { get; set; }
     }
 }

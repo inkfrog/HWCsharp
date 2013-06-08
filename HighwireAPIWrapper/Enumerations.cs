@@ -24,4 +24,10 @@ namespace HighwireAPIWrapper
         ProductResults, 
         Terms
     }
+
+    public enum eAppendGalleryPreference : byte
+    {
+        None = 0,
+        Wide = 1
+    }
 }
