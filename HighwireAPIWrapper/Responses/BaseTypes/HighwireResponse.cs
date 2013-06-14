@@ -45,7 +45,7 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
 
             if (HighwireAPI.DebugMode)
             {
-                using (NoCloseStreamReader reader = new NoCloseStreamReader(response.GetResponseStream(), Encoding.ASCII))
+                using (NoCloseStreamReader reader = new NoCloseStreamReader(response.GetResponseStream(), Encoding.UTF8))
                 {
                     this.DebugInfo.ResponseData = reader.ReadToEnd();
                 }
@@ -67,7 +67,7 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
 
                 if (HighwireAPI.DebugMode)
                 {
-                    using (NoCloseStreamReader reader = new NoCloseStreamReader(responseStr, Encoding.ASCII))
+                    using (NoCloseStreamReader reader = new NoCloseStreamReader(responseStr, Encoding.UTF8))
                     {
                         this.DebugInfo.ResponseData = reader.ReadToEnd();
                     }
@@ -93,7 +93,7 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
                     DateParseHandling = DateParseHandling.DateTime
                 };
 
-                using (StreamReader reader = new StreamReader(responseStr, Encoding.ASCII))
+                using (StreamReader reader = new StreamReader(responseStr, Encoding.UTF8))
                 {
                     JsonTextReader json = new JsonTextReader(reader);
                     this.Data = deserizalier.Deserialize<ResponseType>(json);

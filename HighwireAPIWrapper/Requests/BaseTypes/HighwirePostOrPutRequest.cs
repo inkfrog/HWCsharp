@@ -48,7 +48,7 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
 
             if (this.PostData != null && (this.HttpMethod == eHttpMethod.Post || this.HttpMethod == eHttpMethod.Put))
             {
-                request.ContentType = "application/json";
+                request.ContentType = "application/json; charset=UTF-8";
 
                 StringBuilder json = new StringBuilder();
                 using (StringWriter writer = new StringWriter(json))
@@ -74,7 +74,7 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
                     this.RequestData = json.ToString();
                 }
 
-                byte[] requestData = Encoding.ASCII.GetBytes(json.ToString());
+                byte[] requestData = Encoding.UTF8.GetBytes(json.ToString());
                 request.GetRequestStream().Write(requestData, 0, requestData.Length);
                 request.GetRequestStream().Close();
             }
