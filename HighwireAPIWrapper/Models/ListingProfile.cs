@@ -22,16 +22,19 @@ namespace HighwireAPIWrapper.Models
         public string Reserve_PlusMinus { get; set; }
         public string Reserve_ModifyType { get; set; }
         public decimal? Reserve_ModifyAmount { get; set; }
+        public decimal? Reserve_CustomAmount { get; set; }
         public bool? BIN_Enabled { get; set; }
         public string BIN_Method { get; set; }
         public string BIN_PlusMinus { get; set; }
         public string BIN_ModifyType { get; set; }
         public decimal? BIN_ModifyAmount { get; set; }
+        public decimal? BIN_CustomAmount { get; set; }
         public bool? StartPrice_Enabled { get; set; }
         public string StartPrice_Method { get; set; }
         public string StartPrice_PlusMinus { get; set; }
         public string StartPrice_ModifyType { get; set; }
         public decimal? StartPrice_ModifyAmount { get; set; }
+        public decimal? StartPrice_CustomAmount { get; set; }
         public bool? Catalog_Enabled { get; set; }
         public string Catalog_ProductID { get; set; }
         public string Catalog_ProductName { get; set; }

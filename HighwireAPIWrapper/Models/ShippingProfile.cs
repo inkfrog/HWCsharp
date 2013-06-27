@@ -63,5 +63,6 @@ namespace HighwireAPIWrapper.Models
         public long? Intl_Flat_Discount_Profile_ID { get; set; }
         public long? Intl_Calculated_Discount_Profile_ID { get; set; }
         public bool? Intl_Promotional_Discount_Profile { get; set; }
+        public bool Global_Shipping { get; set; }
     }
 }
