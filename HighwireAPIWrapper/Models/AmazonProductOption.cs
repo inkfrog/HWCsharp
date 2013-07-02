@@ -10,5 +10,6 @@ namespace HighwireAPIWrapper.Models
         public int ID { get; set; }
         public eAmazonProductOptionType OptionType { get; set; }
         public string OptionValue { get; set; }
+        public string OptionName { get; set; }
     }
 }

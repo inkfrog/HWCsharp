@@ -41,5 +41,16 @@ namespace HighwireAPIWrapper.Models
         public AmazonProductOption[] Product_Options { get; set; }
         public string Name { get; set; }
         public bool Shared_Product { get; set; }
+        public string Author { get; set; }
+        public string Binding { get; set; }
+        public string Edition { get; set; }
+        public bool Is_Autographed { get; set; }
+        public bool Is_Memorabilia { get; set; }
+        public int? Number_Of_Pages { get; set; }
+        public DateTime? Publication_Date { get; set; }
+        public string Publisher { get; set; }
+        public DateTime? Release_Date { get; set; }
+        public string Studio { get; set; }
+        public string Currency { get; set; }
     }
 }

@@ -43,5 +43,8 @@ namespace HighwireAPIWrapper
         CPSIA_Cautionary_Statement,
         Fabric_Type,
         Department,
+        Subject_Keywords,
+        Contributor,
+        Language
     }
 }

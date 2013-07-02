@@ -32,5 +32,6 @@ namespace HighwireAPIWrapper.Models
         public bool Gift_Message { get; set; }
         public bool Shared_Offer { get; set; }
         public string Name { get; set; }
+        public string Currency { get; set; }
     }
 }
