@@ -52,5 +52,10 @@ namespace HighwireAPIWrapper.Models
         public DateTime? Release_Date { get; set; }
         public string Studio { get; set; }
         public string Currency { get; set; }
+        public string ASIN { get; set; }
+        public long PrimaryBrowseNodeID { get; set; }
+        public string Title { get; set; }
+        public string CatalogImageURL { get; set; }
+        public string CategoryPath { get; set; }
     }
 }

@@ -125,6 +125,7 @@
     <Compile Include="Requests\GetAllCustomersRequest.cs" />
     <Compile Include="Requests\GetAmazonOfferRequest.cs" />
     <Compile Include="Requests\GetAmazonProductRequest.cs" />
+    <Compile Include="Requests\GetAmazonSettingsRequest.cs" />
     <Compile Include="Responses\AuthResponse.cs" />
     <Compile Include="Responses\BaseTypes\DebugData.cs" />
     <Compile Include="Responses\CreateAmazonOfferResponse.cs" />
@@ -200,6 +201,7 @@
     <Compile Include="Responses\GetAllThemeTemplateSnippetsResponse.cs" />
     <Compile Include="Responses\GetAmazonOfferResponse.cs" />
     <Compile Include="Responses\GetAmazonProductResponse.cs" />
+    <Compile Include="Responses\GetAmazonSettingsResponse.cs" />
     <Compile Include="Responses\GetCategoryResponse.cs" />
     <Compile Include="Responses\GetCustomerResponse.cs" />
     <Compile Include="Responses\GetEbaySettingsResponse.cs" />
