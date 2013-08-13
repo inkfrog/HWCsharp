@@ -43,7 +43,7 @@ namespace HighwireAPIWrapper.Responses.BaseTypes
         {
             this.StatusCode = response == null ? HttpStatusCode.Gone : response.StatusCode;
 
-            if (HighwireAPI.DebugMode)
+            if (response != null && HighwireAPI.DebugMode)
             {
                 using (NoCloseStreamReader reader = new NoCloseStreamReader(response.GetResponseStream(), Encoding.UTF8))
                 {

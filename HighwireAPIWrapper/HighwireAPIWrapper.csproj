@@ -52,6 +52,7 @@
     <Compile Include="Models\AmazonProductCollection.cs" />
     <Compile Include="Models\AmazonProductOption.cs" />
     <Compile Include="Models\AmazonSettings.cs" />
+    <Compile Include="Models\AmazonVariantSettings.cs" />
     <Compile Include="Models\Auth.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryCollection.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Requests\CreateAmazonOfferRequest.cs" />
     <Compile Include="Requests\CreateAmazonProductRequest.cs" />
     <Compile Include="Requests\CreateAmazonSettingsRequest.cs" />
+    <Compile Include="Requests\CreateAmazonVariantSettingsRequest.cs" />
     <Compile Include="Requests\CreateCategoryRequest.cs" />
     <Compile Include="Requests\CreateEbaySettingsRequest.cs" />
     <Compile Include="Requests\CreateListingProfileRequest.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="Requests\DeleteAmazonOfferRequest.cs" />
     <Compile Include="Requests\DeleteAmazonProductRequest.cs" />
     <Compile Include="Requests\DeleteAmazonSettingsRequest.cs" />
+    <Compile Include="Requests\DeleteAmazonVariantSettingsRequest.cs" />
     <Compile Include="Requests\DeleteCategoryFromProductRequest.cs" />
     <Compile Include="Requests\DeleteCategoryRequest.cs" />
     <Compile Include="Requests\DeleteEbaySettingsRequest.cs" />
@@ -131,9 +134,11 @@
     <Compile Include="Responses\CreateAmazonOfferResponse.cs" />
     <Compile Include="Responses\CreateAmazonProductResponse.cs" />
     <Compile Include="Responses\CreateAmazonSettingsResponse.cs" />
+    <Compile Include="Responses\CreateAmazonVariantSettingsResponse.cs" />
     <Compile Include="Responses\DeleteAmazonOfferResponse.cs" />
     <Compile Include="Responses\DeleteAmazonProductResponse.cs" />
     <Compile Include="Responses\DeleteAmazonSettingsResponse.cs" />
+    <Compile Include="Responses\DeleteAmazonVariantSettingsResponse.cs" />
     <Compile Include="Responses\GetAllAmazonOffersResponse.cs" />
     <Compile Include="Responses\GetAllAmazonProductsResponse.cs" />
     <Compile Include="Responses\GetAllCustomersResponse.cs" />

@@ -13,5 +13,6 @@ namespace HighwireAPIWrapper.Models
         public int MarketplaceID { get; set; }
         public int Amazon_UserID { get; set; }
         public int? Amazon_ProductID { get; set; }
+        public string Seller_SKU { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace HighwireAPIWrapper.Models
         public decimal? Price_ModifyAmount { get; set; }
         public string SalePrice_Method { get; set; }
         public string SalePrice_PlusMinus { get; set; }
-        public string salePrice_ModifyType { get; set; }
+        public string SalePrice_ModifyType { get; set; }
         public decimal? SalePrice_ModifyAmount { get; set; }
         public DateTime? SaleStartDate { get; set; }
         public DateTime? SaleEndDate { get; set; }
