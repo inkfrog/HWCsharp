@@ -35,5 +35,11 @@ namespace HighwireAPIWrapper.Models
         public OrderItem[] Order_Items { get; set; }
         public Address Billing_Address { get; set; }
         public Address Shipping_Address { get; set; }
+        public DateTime? Payment_Date { get; set; }
+        public DateTime? Ship_Date { get; set; }
+        public int? eBay_UserID { get; set; }
+        public string eBay_OrderID { get; set; }
+        public int? Bonanza_OrderID  { get; set; }
+        public bool? Checkout_Complete { get; set; }
     }
 }

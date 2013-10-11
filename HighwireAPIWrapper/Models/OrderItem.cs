@@ -16,5 +16,13 @@ namespace HighwireAPIWrapper.Models
         public int? Quantity { get; set; }
         public string Product_Options { get; set; }
         public decimal? Weight { get; set; }
+        public bool? Checkout_Complete  { get; set; }
+        public string eBay_ItemID { get; set; }
+        public string eBay_TransactionID { get; set; }
+        public string ShipTracking { get; set; }
+        public decimal? HandlingCost { get; set; }
+        public decimal? ShippingCost { get; set; }
+        public string ShippingService { get; set; }
+        public bool? IsExternalOrder { get; set; }
     }
 }

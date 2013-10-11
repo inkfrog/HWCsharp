@@ -15,5 +15,6 @@ namespace HighwireAPIWrapper.Models
         public bool? Receive_Updates { get; set; }
         public Address Billing_Address { get; set; }
         public Address Shipping_Address { get; set; }
+        public string eBay_User_Name { get; set; }
     }
 }

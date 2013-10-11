@@ -86,6 +86,7 @@
     <Compile Include="Requests\AddCategoryToProductRequest.cs" />
     <Compile Include="Requests\AddImageToProductRequest.cs" />
     <Compile Include="Requests\AddMetaFieldToProductRequest.cs" />
+    <Compile Include="Requests\AddOrderItemToOrderRequest.cs" />
     <Compile Include="Requests\AddVariantToProductRequest.cs" />
     <Compile Include="Requests\AuthRequest.cs" />
     <Compile Include="Requests\BaseTypes\HighwireAuthRequest.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Requests\CreateEbaySettingsRequest.cs" />
     <Compile Include="Requests\CreateListingProfileRequest.cs" />
     <Compile Include="Requests\CreateOrderLabelRequest.cs" />
+    <Compile Include="Requests\CreateOrderRequest.cs" />
     <Compile Include="Requests\CreateProductRequest.cs" />
     <Compile Include="Requests\CreateShippingProfileRequest.cs" />
     <Compile Include="Requests\CreateTemplateRequest.cs" />
@@ -129,12 +131,15 @@
     <Compile Include="Requests\GetAmazonOfferRequest.cs" />
     <Compile Include="Requests\GetAmazonProductRequest.cs" />
     <Compile Include="Requests\GetAmazonSettingsRequest.cs" />
+    <Compile Include="Requests\UpdateOrderItemRequest.cs" />
+    <Compile Include="Responses\AddOrderItemToOrderResponse.cs" />
     <Compile Include="Responses\AuthResponse.cs" />
     <Compile Include="Responses\BaseTypes\DebugData.cs" />
     <Compile Include="Responses\CreateAmazonOfferResponse.cs" />
     <Compile Include="Responses\CreateAmazonProductResponse.cs" />
     <Compile Include="Responses\CreateAmazonSettingsResponse.cs" />
     <Compile Include="Responses\CreateAmazonVariantSettingsResponse.cs" />
+    <Compile Include="Responses\CreateOrderResponse.cs" />
     <Compile Include="Responses\DeleteAmazonOfferResponse.cs" />
     <Compile Include="Responses\DeleteAmazonProductResponse.cs" />
     <Compile Include="Responses\DeleteAmazonSettingsResponse.cs" />
@@ -230,6 +235,7 @@
     <Compile Include="Responses\GetTemplateResponse.cs" />
     <Compile Include="Responses\GetThemeTemplateResponse.cs" />
     <Compile Include="Responses\GetThemeTemplateSnippetResponse.cs" />
+    <Compile Include="Responses\UpdateOrderItemResponse.cs" />
     <Compile Include="Responses\UpdateOrderLabelResponse.cs" />
     <Compile Include="Responses\UpdateOrderResponse.cs" />
     <Compile Include="Responses\UpdateTemplateResponse.cs" />
