@@ -6,7 +6,7 @@ using HighwireAPIWrapper.Responses.BaseTypes;
 
 namespace HighwireAPIWrapper.Responses
 {
-    public class UpdateTemplateResponse : HighwireResponse
+    public class EditEbaySettingsResponse : HighwireResponse
     {
     }
 }

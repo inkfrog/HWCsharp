@@ -7,14 +7,14 @@ using HighwireAPIWrapper.Models;
 
 namespace HighwireAPIWrapper.Requests
 {
-    public class UpdateTemplateRequest : HighwirePostOrPutRequest<ListingTemplate>
+    public class EditTemplateRequest : HighwirePostOrPutRequest<ListingTemplate>
     {
-        public UpdateTemplateRequest(int storeID, ListingTemplate templateData)
+        public EditTemplateRequest(int storeID, ListingTemplate templateData)
             : base(storeID, templateData, eHttpMethod.Put, string.Format("ebay/templates/{0}.json", templateData.ID.Value))
         {
         }
 
-        public UpdateTemplateRequest(ListingTemplate templateData)
+        public EditTemplateRequest(ListingTemplate templateData)
             : base(templateData, eHttpMethod.Put, string.Format("ebay/templates/{0}.json", templateData.ID.Value))
         {
         }

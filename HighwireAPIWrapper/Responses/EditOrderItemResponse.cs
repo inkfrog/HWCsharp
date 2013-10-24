@@ -6,8 +6,7 @@ using HighwireAPIWrapper.Responses.BaseTypes;
 
 namespace HighwireAPIWrapper.Responses
 {
-    public class UpdateOrderLabelResponse : HighwireResponse
+    public class EditOrderItemResponse : HighwireResponse
     {
-
     }
 }

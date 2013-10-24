@@ -7,14 +7,14 @@ using HighwireAPIWrapper.Models;
 
 namespace HighwireAPIWrapper.Requests
 {
-    public class UpdateOrderRequest : HighwirePostOrPutRequest<Order>
+    public class EditOrderRequest : HighwirePostOrPutRequest<Order>
     {
-        public UpdateOrderRequest(int storeID, Order orderData)
+        public EditOrderRequest(int storeID, Order orderData)
             : base(storeID, orderData, eHttpMethod.Put, string.Format("orders/{0}.json", orderData.ID.Value))
         {
         }
 
-        public UpdateOrderRequest(Order orderData)
+        public EditOrderRequest(Order orderData)
             : base(orderData, eHttpMethod.Put, string.Format("orders/{0}.json", orderData.ID.Value))
         {
         }
