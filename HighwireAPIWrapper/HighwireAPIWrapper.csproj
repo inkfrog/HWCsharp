@@ -72,6 +72,8 @@
     <Compile Include="Models\OrderLabelCollection.cs" />
     <Compile Include="Models\PartsCompatabilities.cs" />
     <Compile Include="Models\PartsCompatability.cs" />
+    <Compile Include="Models\PaymentProfile.cs" />
+    <Compile Include="Models\PaymentProfileCollection.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductCollection.cs" />
     <Compile Include="Models\ShippingProfile.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="Requests\CreateListingProfileRequest.cs" />
     <Compile Include="Requests\CreateOrderLabelRequest.cs" />
     <Compile Include="Requests\CreateOrderRequest.cs" />
+    <Compile Include="Requests\CreatePaymentProfileRequest.cs" />
     <Compile Include="Requests\CreateProductRequest.cs" />
     <Compile Include="Requests\CreateShippingProfileRequest.cs" />
     <Compile Include="Requests\CreateTemplateRequest.cs" />
@@ -114,6 +117,7 @@
     <Compile Include="Requests\DeleteListingProfileRequest.cs" />
     <Compile Include="Requests\DeleteMetaFieldFromProductRequest.cs" />
     <Compile Include="Requests\DeleteOrderLabelRequest.cs" />
+    <Compile Include="Requests\DeletePaymentProfileRequest.cs" />
     <Compile Include="Requests\DeleteProductRequest.cs" />
     <Compile Include="Requests\DeleteShippingProfileRequest.cs" />
     <Compile Include="Requests\DeleteTemplateRequest.cs" />
@@ -122,6 +126,7 @@
     <Compile Include="Requests\EditCategoryRequest.cs" />
     <Compile Include="Requests\EditEbaySettingsRequest.cs" />
     <Compile Include="Requests\EditListingProfileRequest.cs" />
+    <Compile Include="Requests\EditPaymentProfileRequest.cs" />
     <Compile Include="Requests\EditProductRequest.cs" />
     <Compile Include="Requests\EditShippingProfileRequest.cs" />
     <Compile Include="Requests\EditThemeTemplateRequest.cs" />
@@ -131,10 +136,12 @@
     <Compile Include="Requests\GetAllAmazonProductsRequest.cs" />
     <Compile Include="Requests\GetAllCategoriesRequest.cs" />
     <Compile Include="Requests\GetAllCustomersRequest.cs" />
+    <Compile Include="Requests\GetAllPaymentProfilesRequest.cs" />
     <Compile Include="Requests\GetAmazonOfferRequest.cs" />
     <Compile Include="Requests\GetAmazonProductRequest.cs" />
     <Compile Include="Requests\GetAmazonSettingsRequest.cs" />
     <Compile Include="Requests\EditOrderItemRequest.cs" />
+    <Compile Include="Requests\GetPaymentProfileRequest.cs" />
     <Compile Include="Responses\AddOrderItemToOrderResponse.cs" />
     <Compile Include="Responses\AuthResponse.cs" />
     <Compile Include="Responses\BaseTypes\DebugData.cs" />
@@ -143,13 +150,16 @@
     <Compile Include="Responses\CreateAmazonSettingsResponse.cs" />
     <Compile Include="Responses\CreateAmazonVariantSettingsResponse.cs" />
     <Compile Include="Responses\CreateOrderResponse.cs" />
+    <Compile Include="Responses\CreatePaymentProfileResponse.cs" />
     <Compile Include="Responses\DeleteAmazonOfferResponse.cs" />
     <Compile Include="Responses\DeleteAmazonProductResponse.cs" />
     <Compile Include="Responses\DeleteAmazonSettingsResponse.cs" />
     <Compile Include="Responses\DeleteAmazonVariantSettingsResponse.cs" />
     <Compile Include="Responses\DeleteCategoryResponse.cs" />
+    <Compile Include="Responses\DeletePaymentProfileResponse.cs" />
     <Compile Include="Responses\EditEbaySettingsResponse.cs" />
     <Compile Include="Responses\EditListingProfileResponse.cs" />
+    <Compile Include="Responses\EditPaymentProfileResponse.cs" />
     <Compile Include="Responses\EditShippingProfileResponse.cs" />
     <Compile Include="Responses\GetAllAmazonOffersResponse.cs" />
     <Compile Include="Responses\GetAllAmazonProductsResponse.cs" />
@@ -212,6 +222,7 @@
     <Compile Include="Responses\GetAllListingProfilesResponse.cs" />
     <Compile Include="Responses\GetAllOrderLabelsResponse.cs" />
     <Compile Include="Responses\GetAllOrdersResponse.cs" />
+    <Compile Include="Responses\GetAllPaymentProfilesResponse.cs" />
     <Compile Include="Responses\GetAllProductsResponse.cs" />
     <Compile Include="Responses\GetAllShippingProfilesResponse.cs" />
     <Compile Include="Responses\GetAllTemplatesResponse.cs" />
@@ -225,6 +236,7 @@
     <Compile Include="Responses\GetListingProfileResponse.cs" />
     <Compile Include="Responses\GetOrderLabelResponse.cs" />
     <Compile Include="Responses\GetOrderResponse.cs" />
+    <Compile Include="Responses\GetPaymentProfileResponse.cs" />
     <Compile Include="Responses\GetProductCategoriesResponse.cs" />
     <Compile Include="Responses\GetProductImagesResponse.cs" />
     <Compile Include="Responses\GetProductResponse.cs" />
