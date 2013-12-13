@@ -29,5 +29,6 @@ namespace HighwireAPIWrapper.Models
         public decimal? SalesTaxPercent { get; set; }
         public bool? ShippingIncludedInTax { get; set; }
         public string PaymentInstructions { get; set; }
+        public long? BusinessProfileID { get; set; }
     }
 }

@@ -12,6 +12,7 @@ namespace HighwireAPIWrapper.Models
         public int? GeneralProfile_ID { get; set; }
         public int? ShippingProfile_ID { get; set; }
         public int? PaymentProfile_ID { get; set; }
+        public int? ReturnProfile_ID { get; set; }
         public string Title { get; set; }
         public int? Ebay_SiteID { get; set; }
         public string Currency { get; set; }
