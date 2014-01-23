@@ -14,7 +14,7 @@ namespace HighwireAPIWrapper.Models
         public string SKU { get; set; }
         public decimal? Price { get; set; }
         public int? Quantity { get; set; }
-        public string Product_Options { get; set; }
+        public ProductOption[] Product_Options { get; set; }
         public decimal? Weight { get; set; }
         public bool? Checkout_Complete  { get; set; }
         public string eBay_ItemID { get; set; }

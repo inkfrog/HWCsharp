@@ -9,7 +9,7 @@ namespace HighwireAPIWrapper.Requests
     public class DeleteAmazonVariantSettingsRequest : HighwireRequest
     {
         public DeleteAmazonVariantSettingsRequest(int storeID, int productID, int variantID)
-            : base(storeID, eHttpMethod.Delete, string.Format("products/{0}/{1}amazon_variant_settings.json", productID, variantID))
+            : base(storeID, eHttpMethod.Delete, string.Format("products/{0}/{1}/amazon_variant_settings.json", productID, variantID))
         {
         }
 
