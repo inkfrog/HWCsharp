@@ -8,7 +8,7 @@ namespace HighwireAPIWrapper.Models
     public class ItemSpecific
     {
         public string Name { get; set; }
-        public string Value { get; set; }
+        public string[] Values { get; set; }
         public string KeyType { get; set; }
     }
 }

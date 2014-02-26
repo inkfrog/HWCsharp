@@ -65,5 +65,6 @@ namespace HighwireAPIWrapper.Models
         public bool? Intl_Promotional_Discount_Profile { get; set; }
         public bool Global_Shipping { get; set; }
         public long? BusinessProfileID { get; set; }
+        public string Ship_To_Locations { get; set; }
     }
 }

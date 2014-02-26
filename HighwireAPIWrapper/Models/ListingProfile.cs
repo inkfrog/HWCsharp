@@ -43,6 +43,8 @@ namespace HighwireAPIWrapper.Models
         public bool? Catalog_UseStockPhotoAsGallery { get; set; }
         public bool? Catalog_ShowStockPhoto { get; set; }
         public bool? Catalog_ShowDescription { get; set; }
+        public bool? Catalog_UseHWProductID { get; set; }
+        public string Catalog_Brand { get; set; }
         public bool? BestOffer { get; set; }
         public bool? Product_Profile { get; set; }
         public ItemSpecific[] Item_Specifics { get; set; }

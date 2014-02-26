@@ -51,5 +51,7 @@ namespace HighwireAPIWrapper.Models
         public bool Channel_Bonanza { get; set; }
         public bool Channel_Bing { get; set; }
         public bool Channel_Amazon { get; set; }
+        public string Identifier_Type { get; set; }
+        public string Identifier { get; set; }
     }
 }

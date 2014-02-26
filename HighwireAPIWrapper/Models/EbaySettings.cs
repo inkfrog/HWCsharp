@@ -52,5 +52,6 @@ namespace HighwireAPIWrapper.Models
         public string PaymentInstructions { get; set; }
         public long? StoreCategory1 { get; set; }
         public long? StoreCategory2 { get; set; }
+        public string Custom_Label { get; set; }
     }
 }
