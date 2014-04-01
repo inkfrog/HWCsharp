@@ -9,7 +9,7 @@ namespace HighwireAPIWrapper.Models
     {
         public int ID { get; set; }
         public string Notes { get; set; }
-        public List<PartsCompatability> Compatabilities { get; set; }
+        public PartsCompatability[] Compatabilities { get; set; }
         public int Ebay_GeneralProfile { get; set; }
     }
 }
