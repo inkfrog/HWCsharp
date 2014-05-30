@@ -15,6 +15,7 @@ namespace HighwireAPIWrapper.Models
         public string Return_Refund_As { get; set; }
         public string Return_Actor { get; set; }
         public string Return_Details { get; set; }
+        public string Restocking_Fee { get; set; }
         public bool? Product_Profile { get; set; }
         public long? BusinessProfileID { get; set; }
     }
