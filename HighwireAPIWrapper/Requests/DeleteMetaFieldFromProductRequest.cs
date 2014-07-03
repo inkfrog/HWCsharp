@@ -9,12 +9,12 @@ namespace HighwireAPIWrapper.Requests
     public class DeleteMetaFieldFromProductRequest : HighwireRequest
     {
         public DeleteMetaFieldFromProductRequest(int storeID, int productID, int metaFieldID)
-            : base(storeID, eHttpMethod.Delete, string.Format("products/{0}/metafields/{1}.json", productID, metaFieldID))
+            : base(storeID, eHttpMethod.Delete, string.Format("products/{0}/metafield/{1}.json", productID, metaFieldID))
         {
         }
 
         public DeleteMetaFieldFromProductRequest(int productID, int metaFieldID)
-            : base(eHttpMethod.Delete, string.Format("products/{0}/metafields/{1}.json", productID, metaFieldID))
+            : base(eHttpMethod.Delete, string.Format("products/{0}/metafield/{1}.json", productID, metaFieldID))
         {
         }
     }
