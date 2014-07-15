@@ -25,6 +25,7 @@ namespace HighwireAPIWrapper.Models
         public bool? Pay_Other { get; set; }
         public bool? Pay_SeeDescription { get; set; }
         public bool? Pay_PayImmediately { get; set; }
+        public bool? Pay_CCAccepted { get; set; }
         public string SalesTaxState { get; set; }
         public decimal? SalesTaxPercent { get; set; }
         public bool? ShippingIncludedInTax { get; set; }

@@ -28,6 +28,7 @@ namespace HighwireAPIWrapper.Models
         public bool? Pay_Discover { get; set; }
         public bool? Pay_POD { get; set; }
         public bool? Pay_Other { get; set; }
+        public bool? Pay_CCAccepted { get; set; }
         public bool? Pay_SeeDescription { get; set; }
         public bool? Pay_PayImmediately { get; set; }
         public bool? Buyer_AllowAll { get; set; }
