@@ -24,5 +24,7 @@ namespace HighwireAPIWrapper.Models
         public decimal? ShippingCost { get; set; }
         public string ShippingService { get; set; }
         public bool? IsExternalOrder { get; set; }
+        public string Amazon_OrderItemID { get; set; }
+        public string Amazon_ASIN { get; set; }
     }
 }

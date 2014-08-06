@@ -41,5 +41,10 @@ namespace HighwireAPIWrapper.Models
         public string eBay_OrderID { get; set; }
         public int? Bonanza_OrderID  { get; set; }
         public bool? Checkout_Complete { get; set; }
+        public int? Amazon_UserID { get; set; }
+        public string Amazon_OrderID { get; set; }
+        public int? Amazon_MarketplaceID { get; set; }
+        public bool Amazon_FBA { get; set; }
+
     }
 }
