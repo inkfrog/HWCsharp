@@ -9,12 +9,12 @@ namespace HighwireAPIWrapper.Requests
     public class GetAmazonOfferRequest : HighwireGetRequest<GetAmazonOfferRequest>
     {
         public GetAmazonOfferRequest(int storeID, int offerID)
-            : base(storeID, string.Format("amazon/offer/{0}.json", offerID))
+            : base(storeID, string.Format("amazon/offers/{0}.json", offerID))
         {
         }
 
         public GetAmazonOfferRequest(int offerID)
-            : base(string.Format("amazon/offer/{0}.json", offerID))
+            : base(string.Format("amazon/offers/{0}.json", offerID))
         {
         }
     }
