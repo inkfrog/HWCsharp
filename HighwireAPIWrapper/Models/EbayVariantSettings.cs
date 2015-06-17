@@ -10,5 +10,6 @@ namespace HighwireAPIWrapper.Models
         public int? ID { get; set; }
         public int VariantID { get; set; }
         public string Custom_Label { get; set; }
+        public string Product_Identifier { get; set; }
     }
 }
