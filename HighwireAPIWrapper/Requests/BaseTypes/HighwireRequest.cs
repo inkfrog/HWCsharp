@@ -46,7 +46,8 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
             {
                 this.RequestURL = HighwireAPI.BaseURL + this.APIURLSuffix;
             }
-            request.Credentials = new NetworkCredential() { UserName = HighwireAPI.APIKey };
+            string svcCredentials = Convert.ToBase64String(ASCIIEncoding.UTF8.GetBytes(HighwireAPI.APIKey + ":"));
+            request.Headers.Add("Authorization", "Basic " + svcCredentials);
             request.Timeout = HighwireAPI.CallTimeout;
             request.Proxy = null;
             request.KeepAlive = false;

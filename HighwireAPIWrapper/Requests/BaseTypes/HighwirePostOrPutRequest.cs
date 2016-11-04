@@ -35,7 +35,8 @@ namespace HighwireAPIWrapper.Requests.BaseTypes
                 request.Headers.Add("x-hw-masterkey", HighwireAPI.APIKey);
                 request.Headers.Add("x-hw-storeid", this.StoreID.ToString());
             }
-            request.Credentials = new NetworkCredential() { UserName = HighwireAPI.APIKey };
+            string svcCredentials = Convert.ToBase64String(ASCIIEncoding.UTF8.GetBytes(HighwireAPI.APIKey + ":"));
+            request.Headers.Add("Authorization", "Basic " + svcCredentials);
             request.Proxy = null;
             request.KeepAlive = false;
             request.Timeout = HighwireAPI.CallTimeout;
